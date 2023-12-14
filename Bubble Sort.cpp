@@ -1,6 +1,12 @@
 //{ Driver Code Starts
+//Initial Template for C++
+
+// C program for implementation of Bubble sort
+#include <stdio.h>
 #include <bits/stdc++.h>
 using namespace std;
+
+// swapping the elements
 void swap(int *xp, int *yp)
 {
     int temp = *xp;
@@ -10,41 +16,37 @@ void swap(int *xp, int *yp)
 
 
 // } Driver Code Ends
+//User function Template for C++
+
 class Solution
 {
     public:
-    int select(int arr[], int i, int n)
+    //Function to sort the array using bubble sort algorithm.
+    void bubbleSort(int arr[], int n)
     {
-        // code here such that selectionSort() sorts arr[]
-            int minIndex=i;
-           for(int j=i; j<=n-1; j++)
-           {
-               if(arr[j]<arr[minIndex])
-                    minIndex=j;
-           }
-           
-           return minIndex;
+        // Your code here
+        for(int i=0; i<=n-2; i++)
+    {
+        for(int j=0; j<=n-2-i; j++)
+        {
+            
+            if(arr[j]>arr[j+1])
+            {
+                //swap
+                int temp=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
+
+                
+            }
+        }
     }
-     
-    void selectionSort(int arr[], int n)
-    {
-       //code here
-       for(int i=0; i<=n-2; i++)
-       {
-           
-           //select minimum
-           int minIndex= select(arr, i, n);
-           
-           //swap the minimum with i
-           int temp=arr[minIndex];
-           arr[minIndex]=arr[i];
-           arr[i]=temp;
-       }
     }
 };
 
+
 //{ Driver Code Starts.
- 
+
 /* Function to print an array */
 void printArray(int arr[], int size)
 {
@@ -69,10 +71,10 @@ int main()
       scanf("%d",&arr[i]);
       
     Solution ob;  
-    ob.selectionSort(arr, n);
+      
+    ob.bubbleSort(arr, n);
     printArray(arr, n);
     }
-    return 0;
+    return 0;;
 }
-
 // } Driver Code Ends
