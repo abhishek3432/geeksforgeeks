@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../VS Code"
+		},
+		{
+			"path": "../../VS Code/Backend"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ostream": "cpp"
+		},
+		"git.ignoreLimitWarning": true
+	}
+}
