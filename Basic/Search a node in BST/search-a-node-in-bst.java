@@ -62,16 +62,20 @@ class BST {
     boolean search(Node root, int x) {
         // Your code here
         // Approach: Binary Search Algorithm
-		// Avg TC:O(log n)| SC:O(h)
+		// Avg TC:O(log n)| SC:O(1)
         boolean ans;
 		if(root == null)
 			return false;
+		while(root!=null)
+		{
 		if(x> root.data)
-			ans =search(root.right, x);
+			root=root.right;
 		else if(x< root.data)
-                ans= search(root.left, x);
+                root=root.left;
 			else 
-				return true;
-        return ans;
+				return true;		    
+		}
+
+        return false;
     }
 }
