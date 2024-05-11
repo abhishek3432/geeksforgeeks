@@ -101,14 +101,13 @@ class GFG {
 class Solution {
     // Function to insert a node in a BST.
     Node insert(Node root, int Key) {
-        // your code here
-        //Approach: Binary Search Algorithm to reach right position at leaf level using recursion
+       //Approach: Binary Search Algorithm to reach right position at leaf level using recursion
         // TC:O(log n)| SC:O(h)
 
         if(root==null)
             return new Node(Key);
         
-        if(Key>root.data) //if value is equal or greater than node value
+        if(Key>root.data) //if value is equal  than node value
             root.right= insert(root.right, Key);
         else if(Key<root.data)// if value is less than node value and to handle duplicate value
                 root.left= insert(root.left, Key);
